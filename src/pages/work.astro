@@ -1,34 +1,68 @@
 ---
-import { getCollection } from 'astro:content';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-);
+// Lista de aplicaciones para Power QR
+const applications = [
+	{
+		name: "Cartas y Menús",
+		description: "Incluye logo, fotos, precios, descripción, y más para restaurantes.",
+	},
+	{
+		name: "Fiestas y Eventos",
+		description: "Comparte información clave de eventos de manera rápida y fácil.",
+	},
+	{
+		name: "Perfil de Negocio",
+		description: "Ofrece toda la información de tu negocio en un solo escaneo.",
+	},
+	{
+		name: "Biolinks",
+		description: "Un enlace único que dirige a tus principales recursos y redes sociales.",
+	},
+	{
+		name: "VCards",
+		description: "Transfiere la información de contacto directamente a dispositivos móviles.",
+	},
+	{
+		name: "Catálogos",
+		description: "Muestra un catálogo digital de productos o servicios.",
+	},
+	{
+		name: "Formularios",
+		description: "Recoge datos importantes de los usuarios con formularios integrados.",
+	},
+	{
+		name: "Web Builder",
+		description: "Crea páginas web personalizadas accesibles a través de un QR.",
+	},
+	{
+		name: "Reseñas",
+		description: "Facilita que tus clientes dejen reseñas rápidamente.",
+	},
+];
 ---
 
 <BaseLayout
-	title="My Work | Jeanine White"
-	description="Learn about Jeanine White's most recent projects"
+	title="Aplicaciones de Power QR"
+	description="Descubre las diversas aplicaciones de Power QR para maximizar el uso de códigos QR dinámicos."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
+				title="Aplicaciones de Power QR"
+				tagline="Descubre cómo puedes usar Power QR para optimizar tus proyectos."
 				align="start"
 			/>
 			<Grid variant="offset">
 				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
+					applications.map((app) => (
+						<li class="application-card">
+							<h4>{app.name}</h4>
+							<p>{app.description}</p>
 						</li>
 					))
 				}
@@ -36,4 +70,27 @@ const projects = (await getCollection('work')).sort(
 		</main>
 		<ContactCTA />
 	</div>
+	<style>
+
+.application-card {
+	padding: 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	text-align: left;
+	color: #fff;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.application-card h4 {
+	font-size: 1.2em;
+	margin-bottom: 8px;
+}
+
+.application-card p {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+
+	</style>
 </BaseLayout>
