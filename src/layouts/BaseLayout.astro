@@ -24,6 +24,19 @@ const { title, description } = Astro.props;
 			<Nav />
 			<slot />
 			<Footer />
+			<div class="bubbles">
+				<!-- Burbujas generadas automáticamente con CSS -->
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+				<div class="bubble"></div>
+			</div>
 		</div>
 
 		<script>
@@ -54,40 +67,6 @@ const { title, description } = Astro.props;
 				--bg-blend-mode: lighten;
 			}
 
-			/* These backgrounds are displayed below the fold, so we lazy load them
-			   once the `.loaded` class has been set.  */
-			:root.loaded {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
-			}
-			:root.loaded.theme-dark {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
-				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
-			}
-
-			@media (min-width: 50em) {
-				:root {
-					--bg-scale: 1;
-					--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
-				}
-				:root.theme-dark {
-					--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
-				}
-
-				:root.loaded {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
-					--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
-				}
-				:root.loaded.theme-dark {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
-					--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
-				}
-			}
-
 			.backgrounds {
 				min-height: 100%;
 				isolation: isolate;
@@ -104,7 +83,71 @@ const { title, description } = Astro.props;
 					/*header1*/ var(--bg-svg-blend-mode),
 					/*header2*/ normal,
 					/*base*/ normal;
+				position: relative;
+				overflow: hidden;
 			}
+
+			.bubbles {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				overflow: hidden;
+				z-index: 0;
+			}
+
+			.bubble {
+				position: absolute;
+				bottom: -50px;
+				width: 20px;
+				height: 20px;
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 50%;
+				opacity: 0.5;
+				animation: rise 10s linear infinite, float 3s ease-in-out infinite;
+				/* Valores aleatorios para tamaño y posición */
+				transform: translateX(calc(100vw * var(--position)));
+				animation-duration: calc(5s + 10s * var(--duration));
+			}
+
+			/* Animaciones de burbujas */
+			@keyframes rise {
+				0% {
+					transform: translateY(100vh) scale(0.5);
+					opacity: 0.3;
+				}
+				50% {
+					opacity: 0.6;
+				}
+				100% {
+					transform: translateY(-10%) scale(1);
+					opacity: 0;
+				}
+			}
+
+			@keyframes float {
+				0%, 100% {
+					transform: translateX(calc(100vw * var(--position))) translateY(0);
+				}
+				50% {
+					transform: translateX(calc(100vw * var(--position) + 20px)) translateY(-10px);
+				}
+			}
+
+			/* Personalizar cada burbuja */
+			.bubble:nth-child(1) { --position: 0.1; --duration: 1.5; width: 25px; height: 25px; }
+			.bubble:nth-child(2) { --position: 0.3; --duration: 1.7; width: 15px; height: 15px; }
+			.bubble:nth-child(3) { --position: 0.5; --duration: 1.4; width: 20px; height: 20px; }
+			.bubble:nth-child(4) { --position: 0.7; --duration: 1.6; width: 30px; height: 30px; }
+			.bubble:nth-child(5) { --position: 0.9; --duration: 1.5; width: 10px; height: 10px; }
+			.bubble:nth-child(6) { --position: 0.2; --duration: 1.8; width: 25px; height: 25px; }
+			.bubble:nth-child(7) { --position: 0.4; --duration: 1.3; width: 15px; height: 15px; }
+			.bubble:nth-child(8) { --position: 0.6; --duration: 1.7; width: 20px; height: 20px; }
+			.bubble:nth-child(9) { --position: 0.8; --duration: 1.5; width: 30px; height: 30px; }
+			.bubble:nth-child(10) { --position: 1.0; --duration: 1.4; width: 10px; height: 10px; }
+
 			@media (forced-colors: active) {
 				/* Deactivate custom backgrounds for high contrast users. */
 				.backgrounds {
