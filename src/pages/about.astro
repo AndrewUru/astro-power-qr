@@ -5,116 +5,145 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="https://elsaltoweb.es/wp-content/uploads/2024/11/DALL·E-2024-11-15-00.24.45-A-professional-image-for-the-Pricing-section-of-Power-QR-featuring-clean-and-modern-pricing-tables-with-different-plans-for-QR-code-services.-The-d.webp"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title="Sobre Power QR" description="Conoce más sobre Power QR, la solución ideal para códigos QR dinámicos.">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="Sobre Nosotros"
+        tagline="Gracias por visitarnos. Descubre más sobre Power QR, nuestra misión y lo que ofrecemos."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="https://elsaltoweb.es/wp-content/uploads/2024/11/DALL·E-2024-11-15-00.24.45-A-professional-image-for-the-Pricing-section-of-Power-QR-featuring-clean-and-modern-pricing-tables-with-different-plans-for-QR-code-services.-The-d.webp"
+          alt="Equipo de Power QR trabajando en innovación"
+        />
+      </Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+      <section>
+        <h2 >Nuestra Historia</h2>
 
-		<ContactCTA />
-	</div>
+          <p>
+            En **Power QR**, nos dedicamos a ofrecer soluciones innovadoras en la creación de códigos QR dinámicos,
+            personalizables y seguros. Desde nuestros inicios, hemos trabajado para revolucionar la forma en que
+            las empresas y personas interactúan con esta poderosa herramienta digital.
+          </p>
+          <p>
+            Gracias a nuestro enfoque centrado en el cliente, hemos ayudado a miles de negocios a optimizar su
+            presencia digital, mejorar la experiencia de sus clientes y aumentar la eficiencia de sus campañas de
+            marketing.
+          </p>
+          <p>
+            Cada día seguimos desarrollando nuevas funciones que faciliten la vida de nuestros usuarios y les
+            permitan destacar en un mundo conectado.
+          </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Nuestro Enfoque</h2>
+
+          <p>
+            Nos especializamos en ofrecer códigos QR dinámicos que se adaptan a cualquier necesidad: 
+            desde menús digitales para restaurantes hasta herramientas avanzadas para campañas de marketing. 
+            Nuestra plataforma está diseñada para ser intuitiva, accesible y altamente eficiente.
+          </p>
+          <p>
+            Además, brindamos funcionalidades como análisis de escaneos en tiempo real, opciones de personalización avanzada y 
+            actualizaciones de contenido sin necesidad de volver a imprimir códigos.
+          </p>
+
+      </section>
+
+      <section>
+        <h2 class="section-title">Nuestros Valores</h2>
+
+          <p>En Power QR, creemos en:</p>
+          <ul>
+            <li>🚀 **Innovación Constante:** Estamos siempre un paso adelante en tecnología y diseño.</li>
+            <li>🤝 **Cercanía con el Cliente:** Escuchamos tus necesidades y trabajamos para solucionarlas.</li>
+            <li>🌍 **Sostenibilidad:** Contribuimos a reducir el uso de papel mediante soluciones digitales.</li>
+          </ul>
+
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
+
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Reducido ligeramente para mayor compacidad */
+}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+img {
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-lg); /* Mayor profundidad para destacar la imagen */
+}
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Más espacio entre contenido */
+  color: var(--gray-300); /* Mayor contraste para facilitar la lectura */
+}
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+.section-title {
+  font-size: var(--text-2xl); /* Tamaño más destacado */
+  font-weight: bold;
+  color: var(--primary-color); /* Uso del color primario para títulos */
+}
 
-	.content {
-		grid-column: 2 / 4;
-	}
+.content {
+  line-height: 1.75; /* Mejora la legibilidad */
+}
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+.content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+.content ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+.content ul li::before {
+  content: "•";
+  color: var(--accent-color); /* Color de acento */
+  font-weight: bold;
+}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+.content :global(a) {
+  text-decoration: underline dashed var(--primary-color);
+  transition: color var(--theme-transition), text-decoration-color var(--theme-transition);
+}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+.content :global(a:hover),
+.content :global(a:focus) {
+  color: var(--accent-color);
+  text-decoration-color: var(--accent-color);
+}
+
+@media (min-width: 50em) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+  }
+
+  .about > :global(:first-child) {
+    grid-column-start: 2;
+  }
+
+  section {
+    display: contents;
+  }
+}
+
 </style>
