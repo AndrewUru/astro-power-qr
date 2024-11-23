@@ -5,9 +5,8 @@ img: /assets/stock-3.jpg
 img_alt: Código QR dinámico en un fondo moderno con enlaces actualizables en tiempo real
 description: Descubre cómo los códigos QR dinámicos de PowerQR.es te permiten cambiar el contenido de tus enlaces en tiempo real sin necesidad de generar nuevos códigos. Una solución práctica, flexible y profesional.
 tags:
-  - QR Dinámico
+  - QR
   - Flexibilidad
-  - Innovación
 ---
 
 URL Dinámica: Flexibilidad y Control Absoluto con PowerQR.es

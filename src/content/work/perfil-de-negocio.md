@@ -6,9 +6,8 @@ img_alt: A bright pink sheet of paper used to wrap flowers curves in front of ri
 description: |
   Perfil de Negocio: Toda tu información en un solo escaneo
 tags:
-  - Dev
+  - Dinámicos
   - Branding
-  - Backend
 ---
 
 En un mundo donde los clientes esperan respuestas rápidas y accesibles, ofrecer toda la información de tu negocio en un solo lugar puede marcar la diferencia. Con la funcionalidad Perfil de Negocio de PowerQR.es, puedes crear un código QR dinámico que conecte a tus clientes con lo más importante: tus horarios, dirección, contacto, redes sociales, y más.

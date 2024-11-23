@@ -6,9 +6,8 @@ img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   🔗 Todos tus enlaces en un solo lugar
 tags:
-  - QR Dinámicos
-  - Marketing Digital
-  - Redes Sociales
+    - Marketing
+  - Redes
 ---
 
 Descripción:

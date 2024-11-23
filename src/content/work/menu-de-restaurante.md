@@ -6,9 +6,8 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
   🍽️ Digitaliza tu menú de manera profesional con PowerQR.es
 tags:
-  - Restaurantes y Hostelería
-  - Experiencia del Cliente
-  - Innovación en Negocios
+  - Restaurantes 
+  - Hostelería
 ---
 
 Di adiós a los menús impresos y anticuados. Con PowerQR.es, puedes crear un menú digital que tus clientes podrán escanear fácilmente desde la mesa usando su smartphone. Actualiza tus platillos, precios o promociones en tiempo real sin necesidad de volver a imprimir nada. Además, ofrece una experiencia moderna, higiénica y profesional para tus comensales. 📱✨
