@@ -3,10 +3,9 @@ title: Bio Links
 publishDate: 2024-10-02 00:00:00
 img: /assets/stock-4.jpg
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
-description: |
-  🔗 Todos tus enlaces en un solo lugar
+description: 🔗 Todos tus enlaces en un solo lugar
 tags:
-    - Marketing
+  - Marketing
   - Redes
 ---
 
